@@ -3,7 +3,7 @@
 export default [
   {
     path: '/',
-    component: () => import('@/pages/index'),
+    component: () => import('../../pages/index'),
     name: 'home',
     meta: {
       title: 'Vistat',
