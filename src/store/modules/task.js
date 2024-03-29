@@ -32,7 +32,7 @@ export default {
 
   mutations: {
     ADD_TASK(state, task) {
-      state.tasks.push({ ...task, id: state.tasks.length + 1, 'created_at': new Date().toISOString() });
+      state.tasks.push({ ...task, id: state.tasks[state.tasks.length - 1].id + 1, 'created_at': new Date().toISOString() });
     },
     DELETE_TASK(state, task) {
       const index = state.tasks.indexOf(task)
