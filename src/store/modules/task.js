@@ -39,8 +39,8 @@ export default {
       state.tasks.splice(index, 1)
     },
     UPDATE_TASK(state, task) {
-      const index = state.tasks.indexOf(task)
-      state.tasks.splice(index, 1, { ...task, label: task.label, status: task.status, 'created_at': new Date().toISOString() })
+      const element = state.tasks.find((el) => el.id === task.id)
+      state.tasks.splice(state.tasks.indexOf(element), 1, { ...task, label: task.label, status: task.status, 'created_at': new Date().toISOString() })
     },
     UPDATE_TASKS(state) {
       state.tasks.sort()
